@@ -4,13 +4,18 @@
   "description": "Export Yosys netlists to a logic simulator",
   "main": "index.js",
   "scripts": {
-    "test": "./run_tests.sh"
+    "test": "./run_tests.sh",
+    "start": "nodemon server.js"
   },
   "author": "Marek Materzok",
   "license": "BSD-2-Clause",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
   "dependencies": {
     "3vl": "^0.3.4",
     "big-integer": "^1.6.48",
+    "express": "^4.17.1",
     "hashmap": "^2.4.0",
     "minimist": "^1.2.5",
     "sanitize-filename": "^1.6.3",
