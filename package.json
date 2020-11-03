@@ -6,7 +6,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "./run_tests.sh",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "server": "node server.js"
   },
   "author": "Marek Materzok",
   "license": "BSD-2-Clause",
