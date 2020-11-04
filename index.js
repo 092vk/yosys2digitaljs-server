@@ -810,7 +810,9 @@ async function process(filenames, dirname, options = {}) {
         const toplevel = toporder.pop();
         const output = out[toplevel];
         output.subcircuits = {};
-        for (const x of toporder) output.subcircuits[x] = out[x];
+        for (const x of toporder) 
+            output.subcircuits[x] = out[x];
+        output.name = toplevel;
         return {
             output: output,
             yosys_output: obj,
