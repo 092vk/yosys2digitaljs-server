@@ -1,6 +1,6 @@
 # Dockerfile
 
-FROM node:10.16.0
+FROM node:lts-slim
 RUN apt-get update -qq
 RUN apt-get install -y yosys
 RUN mkdir -p /opt/app
