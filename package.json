@@ -2,9 +2,10 @@
   "name": "yosys2digitaljs",
   "version": "0.8.0",
   "description": "Export Yosys netlists to a logic simulator",
-  "main": "dist/index",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
+    "build": "tsc",
     "test": "./run_tests.sh",
     "start": "nodemon server.js",
     "server": "node server.js"
