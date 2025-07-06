@@ -1,6 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var yosys2digitaljs = require('./index.js');
+var yosys2digitaljs = require('./dist/index.js');
 var server = express();
 
 server.use(

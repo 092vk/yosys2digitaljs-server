@@ -1,6 +1,7 @@
 // Write your modules here!
-module fsm(input clk, rst, a, output b);
+module fsm(input clk, rst, a, output logic b);
 
+  (* fsm_encoding = "auto" *)
   logic [1:0] state;
   
   localparam A = 2'b00;
@@ -10,7 +11,7 @@ module fsm(input clk, rst, a, output b);
 
   always_ff @(posedge clk or posedge rst)
     if (rst) state <= B;
-    else casex(state)
+    else unique case(state)
       A: state <= C;
       B: state <= D;
       C: if (a) state <= D; else state <= B;
@@ -19,7 +20,7 @@ module fsm(input clk, rst, a, output b);
 
   always_comb begin
     b = 1'bx;
-    case(state)
+    unique case(state)
       A, D: b = 0;
       B: b = 1;
       C: if (a) b = 1; else b = 0;
